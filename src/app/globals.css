@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+    .footer_title {
+        @apply text-lg text-black font-semibold mb-6
+    }
+
+    .footer_link {
+        @apply text-black opacity-60 font-semibold mb-4 text-sm cursor-pointer hover:text-blue-600
+    }
+}

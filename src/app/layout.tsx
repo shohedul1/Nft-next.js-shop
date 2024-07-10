@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
+import ResponsiveNav from "@/components/Navbar/ResponsiveNav";
+import Footer from "@/components/Footer/Footer";
+import ScrollToTop from "@/components/Helper/ScrollToTop";
 
-const poppins  = Poppins({ 
+const poppins = Poppins({
   subsets: ["latin"],
-  weight:['100','200','300','400','500','600','700','800','900'
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'
   ]
 
- });
+});
 
 export const metadata: Metadata = {
   title: "Nft next.js shop",
@@ -23,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ResponsiveNav/>
+        <ResponsiveNav />
         {children}
-        </body>
+        <Footer />
+        <ScrollToTop />
+      </body>
     </html>
   );
 }
